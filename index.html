@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyvin B. Venzuela | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="icon" type="image/png" href="./assets/headlogo.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    
+</head>
+<body>
+    
+    <div class="preloader">
+        <div class="loader-inner">
+          <span class="word"></span>
+        </div>
+      </div>
+      
+      
+    <nav id="desktop-nav">
+        <div class="logo" id="logo">Reyvin.</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <nav id="hamburger-nav">
+        <div class="logo">Reyvin B. Venzuela</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Reyvin Venzuela profile picture" class="profile-image">
+        </div>
+        <div class="section__text">
+            <h1 class="title title-scroll-animation">Reyvin Venzuela</h1>
+            <h2 class="subtitle">Frontend Developer</h2>
+            <p class="section__text__p2">I'm an Entry level Frontend Developer based in the Philippines, <br>
+                and I'm very passionate and dedicated to my work.</p>
+            <div class="btn-container">
+                <button class="btn1">
+                    <span>Social Links</span>
+                    <div class="container">
+                        <div id="socials-container">
+                            <a href="https://www.linkedin.com/in/reyvin-venzuela-898b81244/" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/linkedin.png" alt="My Linkedin profile" class="icon">
+                            </a>
+                            <a href="https://github.com/Reyvin2031" target="_blank" rel="noopener noreferrer">
+                                <img src="./assets/github.png" alt="My Github profile" class="icon">
+                            </a>
+                            <button class="btn btn-color-2" onclick="window.open('./assets/my-resume.pdf')">Download CV</button>
+                        </div>
+                    </div>
+            </div>
+        </div>    
+    </section> 
+    
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <a href="https://cvsu.edu.ph/silang-campus/" target="_blank">
+                <img src="./assets/Silang-Campus-scaled.jpg" alt="Profile picture" 
+                class="about-pic">
+            </a>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon"/>
+                        <h3>Experience</h3>
+                        <p>Internship<br>Web Designer</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="experience icon" class="icon"/>
+                        <h3>Education</h3>
+                        <p>Bachelor of Science <br>Computer Science</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>I am a graduate of Cavite State University - Silang Campus, where I gained a solid academic foundation. My internship experience was instrumental in honing my skills, providing practical exposure to real-world scenarios. 
+                        With this background, I am enthusiastic about leveraging my expertise and continuing to grow professionally in order to make a meaningful impact in my chosen field.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+    </section>
+    
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Tech Stack</h2>
+                    <div class="article-container">
+                        <a href="#">
+                            <article>
+                                <a href="https://html.com/" target="_blank">
+                                    <img src="./assets/html1.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>HTML</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article>
+                                <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">
+                                    <img src="./assets/css-3.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>CSS</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article>
+                                <a href="https://www.javascript.com/" target="_blank">
+                                    <img src="./assets/java-script.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>JavaScript</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article>
+                                <a href="https://www.figma.com/files/recents-and-sharing/recently-viewed?fuid=1129005519442863637" target="_blank">
+                                    <img src="./assets/figma.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>Figma</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article>
+                                <a href="https://www.canva.com/" target="_blank">
+                                    <img src="./assets/canva.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>Canva</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                        <a href="#">
+                            <article>
+                                <a href="https://www.adobe.com/ph_en/products/photoshop/landpa.html?gclid=Cj0KCQjw8NilBhDOARIsAHzpbLABAlpelh-b6AZbfirY7lLdidgz8U1ce7urbY1KH9tK3070cPU7fukaAq5LEALw_wcB&sdid=G4FRYR56&mv=search&ef_id=Cj0KCQjw8NilBhDOARIsAHzpbLABAlpelh-b6AZbfirY7lLdidgz8U1ce7urbY1KH9tK3070cPU7fukaAq5LEALw_wcB:G:s&s_kwcid=AL!3085!3!444512451750!e!!g!!adobe%20photoshop!703953000!39399096689" target="_blank">
+                                    <img src="./assets/photoshop.png" alt="Experience icon" class="icon" />
+                                    <div>
+                                        <h3>Photoshop</h3>
+                                        <p>Basic</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#certificates'" />
+    </section>
+
+    <section id="certificates">
+        <p class="section__text__p1">My Achievements</p>
+        <h1 class="title">Certificates</h1>
+        <div class="certificates-container">
+            <div class="certificate-item">
+                <a href="./assets/VENZUELA.pdf" target="_blank"><img src="./assets/Cert.png" alt="Certificate 1"></a>
+                <h3>UI/UX Design/Reactjs/Laravel.</h3>
+                <p>Filipino Web Development Peers</p>
+                <p>August 4, 2023</p>
+            </div>
+        </div>
+    
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+    </section>
+    
+  
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container project-img-container">
+                    <div class="article-container">
+                        <img src="./assets/project-1.png" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project One</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.figma.com/proto/lHvPGtjA3OgkXrUJmzewua/Yoga-Mind-landing-page?type=design&node-id=2-2&t=BSfy19UuTusO1HUS-0&scaling=min-zoom&page-id=0%3A1')">Figma</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-img-container">
+                    <div class="article-container">
+                        <img src="./assets/project-2.png" alt="Project 2" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Two</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.figma.com/proto/3cYgy5t6jdZUXuM8QA6Vvl/Mind-Set-Landing-page?type=design&node-id=2-3&t=ZXAgv4xLUi5dmmKX-0&scaling=min-zoom&page-id=0%3A1')">Figma</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-img-container">
+                    <div class="article-container">
+                        <img src="./assets/project-3.png" alt="Project 3" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Three</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://reyvin2031.github.io/Myportfolio.github.io/')">Live Demo</button>
+                    </div>
+                </div>
+                <div class="details-container color-container project-img-container">
+                    <div class="article-container">
+                        <img src="./assets/project-4.png" alt="Project 4" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Project Four</h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('')">Live Demo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'"/> 
+    </section>
+    
+    <section id="contact">
+        <h1 class="title">Contact Me</h1>
+        <div class="map-container">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53538.22414061867!2d120.95049785258364!3d14.313136221526316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d5c84cfd23a7%3A0x2fe4aaac204eee50!2sDasmarinas%20City%2C%20Cavite!5e0!3m2!1sen!2sph!4v1689791093432!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <footer>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon"/>
+                    <p><a href="mailto:examplemail@gmail.com">reyvinbvenzuela@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
+                    <p><a href="https://www.linkedin.com/in/reyvin-venzuela-898b81244/" target="_blank">LinkedIn</a></p>
+                </div>
+            </div>
+            <p class="pp">&#169; 2023 Reyvin Venzuela. All Rights Reserved.</p>
+        </footer>
+        <img src="./assets/up-arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#logo'"/>
+    </section>
+
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    
+    
+</body>
+</html>

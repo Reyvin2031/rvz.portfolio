@@ -1,0 +1,51 @@
+/* loader.css */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.loader-inner {
+    text-align: center;
+}
+
+.word {
+    opacity: 0;
+    font-size: 3rem;
+    animation: pop-up 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideOutBlur {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0); /* No blur at the start */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%); /* Slide out from the top */
+        filter: blur(8px); /* Apply blur at the end of the animation */
+    }
+}
+
+/* Add a class to the preloader to trigger the slideOutBlur animation from the top */
+
+.preloader.hidden {
+    opacity: 0; /* Set the opacity to 0 to hide the preloader */
+    pointer-events: none; /* Disable pointer events on hidden preloader */
+    animation: slideOutBlur 0.8s ease-in-out; /* Apply the slideOutBlur animation */
+}

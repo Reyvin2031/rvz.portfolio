@@ -1,0 +1,851 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, section {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    cursor: crosshair;
+}
+
+section {
+    height: 100vh;
+  }
+
+  
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    position: inherit;
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+html {
+    overflow-y: scroll;
+}
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links {
+    gap: 3rem;
+    height: 0;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+.logo {
+    height: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.logo:hover {
+    transform: translate(-10%, -10%) scale(1.1);
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none;
+    z-index: 1000;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+    z-index: 999;
+}
+
+.menu-links.open {
+    transform: translateX(0); /* Slide the menu into view */
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 2rem;
+}
+
+.menu-links a {
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-links a:hover {
+    color: grey;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTIONS */
+
+#profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    height: 80vh;
+    align-items: center;
+}
+
+#profile.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+   
+#profile .title:hover {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+    transition: font-size 0.5s ease, text-shadow 0.5s ease, color 0.5s ease; /* Add transitions for smooth animation */
+}
+
+    .title-scroll-animation {
+        animation: scrollAnimation 2s infinite alternate;
+    }
+
+@keyframes scrollAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px); /* Adjust the value to control the amount of scrolling */
+    }
+}
+
+  .section__pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust the height as needed */
+    width: auto; /* Remove the width property */
+    margin: auto 0;
+}
+
+.about-pic {
+    max-height: 100%;
+    width: 500px;
+}
+
+.section__pic-container img {
+    max-height: 100%; /* Ensure the image does not exceed the container's height */
+    object-fit: contain; /* Adjust the object-fit value as needed */
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    text-align: inherit;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}
+
+
+.subtitle {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICON */
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background-color: #eeeeed;
+    border-radius: 80px;
+    border: none;
+    padding: 0 80px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+   }
+   
+   .btn1:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+   }
+   
+   .btn1 span {
+    position: absolute;
+    z-index: 99;
+    width: 150px;
+    height: 50px;
+    border-radius: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: #eeeeed;
+    background-color: #1f1f1f;
+    padding: 0 10px;
+    -webkit-transition: all 1.2s ease;
+    transition: all 1.2s ease;
+   }
+   
+   .btn1 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 150px;
+    border-radius: 80px;
+    line-height: 50px;
+   }
+   
+   .btn1 svg {
+    padding: 0 5px;
+    opacity: 0;
+   }
+   
+   .btn1 .container svg:nth-of-type(1) {
+    -webkit-transition-delay: 0.65s;
+            transition-delay: 0.65s;
+   }
+   
+   .btn1 .container svg:nth-of-type(2) {
+    -webkit-transition-delay: 0.8s;
+            transition-delay: 0.8s;
+   }
+   
+   .container svg:nth-of-type(3) {
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+   }
+   
+   .btn1:hover span {
+    opacity: 0;
+   }
+   
+   .btn1:hover svg {
+    opacity: 1;
+   }
+
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #eeeeed;
+    border-radius: 25px;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f1f1f;
+    transition: all 0.2s ease;
+  }
+
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    border: #000;
+}
+
+.btn-color-2:hover {
+    border: rgb(44, 44, 44) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+
+/* About SECTION */
+
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 2.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 1.5rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container {
+    height: 420px;
+    width: 420px;
+    margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+#experience {
+    position: relative;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Add this CSS style to center the articles within the container */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Adjust this property as needed */
+    gap: 2.5rem;
+    text-align: initial;
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
+.color-container {
+    border-color: rgb(0, 0, 0);
+    background: (250, 250, 250); 
+}
+
+.profile-image {
+    width: 100%;
+}
+
+#projects {
+    position: relative;
+}
+
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn {
+    color: black;
+    border: rgb(163, 163, 163);
+}
+
+.project-img-container {
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+
+
+
+.project-img {
+    transition: transform 0.5s;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    filter: grayscale(100)
+}
+
+
+#contact .title {
+    font-size: 4rem;
+}
+
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background-color: rgba(255, 255, 255, 0.8); /* Add an overlay to the background image */
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+
+
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.54rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    background-image: url('./assets/email.png'); 
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+  }
+
+/* Footer Section */
+
+footer {
+    height: 18vh;
+    margin: 9rem 1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+.pp {
+    margin: 13rem auto;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader-inner {
+    text-align: center;
+}
+
+.word {
+    opacity: 0;
+    font-size: 2rem;
+    animation: pop-up 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.subtitle {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .subtitle::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .subtitle:hover {
+    color: #000;
+  }
+  
+  .subtitle:hover::after {
+    transform: scaleX(1);
+  }
+  
+  #scroll-container {
+    height: 100vh; /* Set the height of the scroll container to full viewport height */
+    overflow: hidden; /* Hide the native scrollbar */
+  }
+  
+
+  /* Add this CSS style to center the iframe */
+#iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* Set the height of the iframe container */
+    margin: 0 auto; /* Horizontally center the iframe container */
+}
+
+iframe {
+    width: 1350px;
+}
+  
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #282936;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+#certificates {
+    position: relative;
+    text-align: center; /* Center the content horizontally */
+    margin-top: 40px; /* Add some spacing from the previous section */
+}
+
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px;
+}
+
+.certificate-item {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between items */
+}
+
+.certificate-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+

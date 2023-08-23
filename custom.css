@@ -1,0 +1,30 @@
+.logo-effect {
+    /* Add your desired effect styles here */
+    /* Example effect: scaling the logo */
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.project-img-container:hover .project-img {
+    transform: scale(1.2); /* Increase the size of the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.project-img-container:hover .project-title {
+    color: grey; /* Change the color of the project title on hover */
+}
+
+.project-img-container:hover .project-btn {
+    background-color: rgb(53, 53, 53); /* Change the background color of the button on hover */
+    color: white; /* Change the text color of the button on hover */
+    border-color: rgb(53, 53, 53); /* Change the border color of the button on hover */
+}
+
+.project-img-container {
+    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transitions for the transform and box shadow */
+}
+
+
+
+
+
